@@ -1,0 +1,17 @@
+請你們兩位優先打開名為「dentistry-inference-utility」的儲存庫分支。
+
+任務 1 截止日期：10/4： 修正展峯的程式碼。(https://github.com/smartsurgerytek/dentistry-inference-periodontal/blob/main/notebooks/postprocessing_backgound_mask.ipynb)
+AI 模型的分割遮罩應保持保護，並被背景遮罩覆蓋。此任務將由廉家主持，皓然協助。
+由於實例分割的問題，重疊的標籤將導致不同區域分開。為了完成標籤，您可能需要同時使用兩個模型或在後處理中將它們結合起來：
+可以從 Hugging Face 儲存庫獲得 Denti 遮罩：
+https://huggingface.co/smartsurgery/dentistry-models/tree/main/3-7-13
+https://huggingface.co/smartsurgery/dentistry-models/tree/main/all_category
+
+任務 2 截止日期：10/11：
+實現新的後處理功能，使用 CV2 中的開運算和閉運算進行顏色校正，由廉家主持。
+對於任務 1 和任務 2，可以應用所有啟發式方法。
+請在這 300 個示例上提供基準，將結果與標註遮罩進行比較，以計算平均 IOU。
+
+任務 3 截止日期：10/11：
+創建功能分支並維護 LabelToolMain 儲存庫。
+目標是成功運行專案並啟用標籤排列的 CRUD 操作，由皓然主持。
