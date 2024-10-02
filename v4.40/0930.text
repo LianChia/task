@@ -5,7 +5,10 @@ AI 模型的分割遮罩應保持保護，並被背景遮罩覆蓋。此任務�
 由於實例分割的問題，重疊的標籤將導致不同區域分開。為了完成標籤，您可能需要同時使用兩個模型或在後處理中將它們結合起來：
 可以從 Hugging Face 儲存庫獲得 Denti 遮罩：
 https://huggingface.co/smartsurgery/dentistry-models/tree/main/3-7-13
-https://huggingface.co/smartsurgery/dentistry-models/tree/main/all_category
+https://huggingface.co/smartsurgery/dentistry-models/tree/main/all_category  
+a.模型的denti取出來
+b.background後處理完的遮罩取出來
+b-a and b 然後再貼回去inference的圖
 
 任務 2 截止日期：10/11：
 實現新的後處理功能，使用 CV2 中的開運算和閉運算進行顏色校正，由廉家主持。
