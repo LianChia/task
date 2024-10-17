@@ -26,3 +26,24 @@ B組最佳 IOU:  0.8066795317744591
 B組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 7, 'iterations': 5, 'flood_fill': False, 'multi_stage': False, 'apply_blur': True, 'edge_detection': False}  
 B組最佳 IOU:  0.8073309211250995  
 B組平均 IOU (使用最佳參數):  0.8066786239040766  
+
+## img
+### 未使用Optuna
+平均 IoU: 0.8350125762942182
+
+### 使用Optuna
+最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 17, 'iterations': 20, 'flood_fill': False, 'multi_stage': True}  
+最佳 IOU:  0.8577800583498668  
+平均 IOU:  0.8096051453554824  
+
+# 以下不採用
+
+### 使用 Optuna + 尋找閾值
+最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 17, 'iterations': 20, 'flood_fill': False, 'multi_stage': True}  
+最佳 IOU:  0.8577816747158178  
+平均 IOU (使用最佳參數):  0.7283899739583333  
+
+### 使用 Optuna + 尋找閾值 + 高斯模糊、邊緣檢測
+最佳參數:  {'kernel_shape': 'circle', 'kernel_size': 11, 'iterations': 19, 'flood_fill': False, 'multi_stage': True, 'apply_blur': True, 'edge_detection': False}
+最佳 IOU:  0.8579678311681096
+平均 IOU (使用最佳參數):  0.7659951934394204
