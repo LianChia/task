@@ -1,18 +1,23 @@
 # 優化並計算平均IOU
-## 未使用Optuna
+## 300
+### 未使用Optuna
 遮罩處理前的IOU：  
-平均 IoU: 0.9988908774589454
+平均 IoU: 0.8114603760004598
   
 遮罩處理後的IOU：   
-平均 IoU: 0.9793180381450941  
+平均 IoU: 0.8066555201004715  
 
-## 使用Optuna
+### 使用Optuna
 遮罩處理前的IOU：  
-最佳參數:  {'kernel_shape': 'rect', 'kernel_size': 29, 'iterations': 10, 'flood_fill': False}  
-最佳 IOU:  0.9830615234375001  
-平均 IOU:  0.9567515803747362  
+A組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 7, 'iterations': 5, 'flood_fill': True, 'multi_stage': True}  
+A組最佳 IOU:  0.813315729320885  
+A組平均 IOU:  0.8038650172968524  
   
 遮罩處理後的IOU：  
-最佳參數:  {'kernel_shape': 'rect', 'kernel_size': 30, 'iterations': 9, 'flood_fill': False}  
-最佳 IOU:  0.9830615234375001  
-平均 IOU:  0.9604628703569215  
+B組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 5, 'iterations': 9, 'flood_fill': False, 'multi_stage': False}  
+B組最佳 IOU:  0.8066856624187686  
+B組平均 IOU:  0.7972032517432359   
+
+### 使用 Optuna + 尋找閾值
+B組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 19, 'iterations': 2, 'flood_fill': True, 'multi_stage': True}  
+B組最佳 IOU:  0.8066795317744591
