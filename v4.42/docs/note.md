@@ -36,6 +36,12 @@ B組平均 IOU (使用最佳參數):  0.8066786239040766
 最佳 IOU:  0.8577800583498668  
 平均 IOU:  0.8096051453554824  
 
+### 使用Optuna來優化參數  
+結合閾值並調整kernel_size、iterations的範圍縮小  
+新增CLAHE（自適應直方圖均衡化）  
+最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 19, 'iterations': 2, 'flood_fill': False, 'multi_stage': False, 'apply_blur': True, 'edge_detection': False, 'apply_clahe': False}  
+最佳參數計算的平均 IOU:  0.8359075306711994
+
 # 以下不採用
 
 ### 使用 Optuna + 尋找閾值
