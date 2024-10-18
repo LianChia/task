@@ -77,3 +77,8 @@ groundtruth_files 未定義:
 重複讀取圖片:  
 問題: 在最初的程式碼中，可能重複讀取同一張圖片進行處理，增加了計算的冗餘。  
 解決方案: 將讀取圖片的邏輯提取到單獨的迴圈中，使其在計算平均 IoU 時不會重複讀取。  
+
+### 同問題(2)增加交叉驗證並加快計算速度
+最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 13, 'iterations': 9, 'flood_fill': False, 'multi_stage': True, 'apply_canny': False, 'apply_gaussian_blur': False, 'apply_clahe': True}  
+最佳 IOU:  0.9256446822633648  
+平均 IOU (使用最佳參數):  0.8477866754730468  
