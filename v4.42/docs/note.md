@@ -51,7 +51,7 @@ B組平均 IOU (使用最佳參數):  0.8066786239040766
 
 ### 使用 Optuna + 尋找閾值 + 高斯模糊、邊緣檢測(2)
 最佳參數:  {'kernel_shape': 'circle', 'kernel_size': 11, 'iterations': 19, 'flood_fill': False, 'multi_stage': True, 'apply_blur': True, 'edge_detection': False}
-最佳 IOU:  0.8579678311681096
+最佳 IOU:  0.8579678311681096  
 平均 IOU (使用最佳參數):  0.7659951934394204
 
 ---10/18---
