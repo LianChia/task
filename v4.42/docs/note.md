@@ -42,7 +42,7 @@ B組平均 IOU (使用最佳參數):  0.8066786239040766
 最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 19, 'iterations': 2, 'flood_fill': False, 'multi_stage': False, 'apply_blur': True, 'edge_detection': False, 'apply_clahe': False}  
 最佳參數計算的平均 IOU:  0.8359075306711994
 
-# 以下不採用
+# 以下兩項不採用
 
 ### 使用 Optuna + 尋找閾值(1)
 最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 17, 'iterations': 20, 'flood_fill': False, 'multi_stage': True}  
@@ -51,7 +51,7 @@ B組平均 IOU (使用最佳參數):  0.8066786239040766
 
 ### 使用 Optuna + 尋找閾值 + 高斯模糊、邊緣檢測(2)
 最佳參數:  {'kernel_shape': 'circle', 'kernel_size': 11, 'iterations': 19, 'flood_fill': False, 'multi_stage': True, 'apply_blur': True, 'edge_detection': False}
-最佳 IOU:  0.8579678311681096
+最佳 IOU:  0.8579678311681096  
 平均 IOU (使用最佳參數):  0.7659951934394204
 
 ---10/18---
@@ -82,16 +82,3 @@ groundtruth_files 未定義:
 最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 13, 'iterations': 9, 'flood_fill': False, 'multi_stage': True, 'apply_canny': False, 'apply_gaussian_blur': False, 'apply_clahe': True}  
 最佳 IOU:  0.9256446822633648  
 平均 IOU (使用最佳參數):  0.8477866754730468  
-
----10/21---
-# 增加數據到300
-Mask未處理前：  
-平均 IoU: 0.7646949307574317
-
-Mask處理後：  
-平均 IoU: 0.7944607119465533  
-
-使用Optuna Mask處理前：
-A組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 5, 'iterations': 18, 'flood_fill': False, 'multi_stage': False}
-A組最佳 IOU:  0.7778119829904104
-A組平均 IOU:  0.7588992141808906
