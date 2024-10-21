@@ -82,3 +82,16 @@ groundtruth_files 未定義:
 最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 13, 'iterations': 9, 'flood_fill': False, 'multi_stage': True, 'apply_canny': False, 'apply_gaussian_blur': False, 'apply_clahe': True}  
 最佳 IOU:  0.9256446822633648  
 平均 IOU (使用最佳參數):  0.8477866754730468  
+
+---10/21---
+# 增加數據到300
+Mask未處理前：  
+平均 IoU: 0.7646949307574317
+
+Mask處理後：  
+平均 IoU: 0.7944607119465533  
+
+使用Optuna Mask處理前：
+A組最佳參數:  {'kernel_shape': 'ellipse', 'kernel_size': 5, 'iterations': 18, 'flood_fill': False, 'multi_stage': False}
+A組最佳 IOU:  0.7778119829904104
+A組平均 IOU:  0.7588992141808906
